@@ -1,0 +1,1 @@
+CREATE TABLE readmissions_1 AS SELECT provider_id, measure_id, compared_to_national, score, denominator, lower_estimate, higher_estimate, footnote FROM readmissions WHERE footnote is NULL or footnote = '';
