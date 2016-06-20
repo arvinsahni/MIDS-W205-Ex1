@@ -1,0 +1,11 @@
+Part 3 : Q4
+Correlation between hospital quality score or procedural variability score with survey responses
+
+Correlation between hospital quality score and survey responses = -12.1% ( negative 12.1%)
+
+
+From the CMS Hospital compare website:
+“The Patient Experience of Care Domain score is comprised of two parts: the HCAHPS Base Score (maximum of 80 points) and the HCAHPS Consistency Score (maximum of 20 points)…… The Patient Experience of Care Domain Score (0 – 100 points) is the sum of the HCAHPS Base Score (0 – 80 points) and HCAHPS Consistency Score (0 – 20 points). “
+Hence I use the sum of these two as a factor of determining correlation against the hospital quality score ( determined as part of the best_hospitals question)
+
+As measures and its related variability do not appear in the survey_responses table directly , I am not focussing on this for correlation calculation
