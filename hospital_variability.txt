@@ -1,0 +1,19 @@
+Part 3: Q3 
+
+Procedures with maximum variability between hospitals
+
+Results of the query ( measure_name, std deviation of score):
+
+Median Time from ED Arrival to ED Departure for Admitted ED Patients	 55.302699677535884
+Median Time from ED Arrival to ED Departure for Discharged ED Patients	41.289669221684555
+Median Time to Transfer to Another Facility for Acute Coronary Intervention- Reporting Rate	38.978043691297344
+Admit Decision Time to ED Departure Time for Admitted Patients	25.64790105305457
+Venous Thromboembolism Prophylaxis	23.439044270935206
+Head CT Scan Results for Acute Ischemic Stroke or Hemorrhagic Stroke Patients who Received Head CT or MRI Scan Interpretation Within 45 Minutes of ED Arrival	20.724639052099747
+Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival	18.97824254544566
+Thrombolytic Therapy	17.918094089677155
+Median Time to Pain Management for Long Bone Fracture	17.73030154301569
+Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver	16.78453065893217
+
+In order to find answer to this query , I have used both effective care and readmissions data as they both fall under procedures data.I combine the two tables with a UNION ALL and use the built-in function stddev_pop against the score column to identify the top 10 .
+While the data from readmissions table is picked up without any additional filtering , i filter out the non-numeric scores in the effective care table as highlighted for the previous questions
