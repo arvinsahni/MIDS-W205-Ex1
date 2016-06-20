@@ -1,0 +1,18 @@
+Part 3: Q2 
+Best states by quality care
+
+Result of the query :
+DC	89.625
+VI	89.0
+VT	82.83333333333333
+MD	80.75555555555556
+MT	80.38709677419355
+SD	79.79411764705883
+GU	79.0
+CT	78.90322580645162
+CA	78.77507598784194
+DE	78.14285714285714
+
+In order to come up with the top 10 results, I have used an average measure of scores given for effective_care for all hospitals in a state. For each hospital the number to be used is the average score across various measures and conditions, While calculating this, I filtered out the score data which was non-numeric ( e.g. Low, High etc) as they were all older data from 2013 as compared to the numeric data.There are some numeric scores from 2013 as well but they are all very low in value and hence do not affect the outcome of this query.
+I also filtered out any rows from the original effective_care csv file which had NULL or insufficient values ( this was done by using non-NULL footnote column value)
+
