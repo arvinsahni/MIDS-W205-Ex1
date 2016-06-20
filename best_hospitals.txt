@@ -1,0 +1,20 @@
+Part 3: Q1 
+Best Hospitals by quality care
+
+Result of the query : ( Name of the hospital, provider id, average score)
+
+COMMUNITY MEMORIAL HOSPITAL, INC	331316	170.33333333333334
+KAISER FOUNDATION HOSPITAL	120011	148.75
+GRADY MEMORIAL HOSPITAL	110079	142.6
+BRECKINRIDGE MEMORIAL HOSPITAL	181319	142.0
+POTOMAC VALLEY HOSPITAL	511315	139.33333333333334
+BOONE MEMORIAL HOSPITAL	511313	135.75
+UNIVERSITY OF MARYLAND ST JOSEPH MEDICAL CENTER	210063	133.0
+MERCY HOSPITAL CASSVILLE	261317	129.66666666666666
+KERN VALLEY HEALTHCARE DISTRICT	051314	126.14285714285714
+PARKLAND HEALTH AND HOSPITAL SYSTEM	450015	125.8
+
+In order to come up with the top 10 results, I have used an average measure of scores given for effective_care for a given hospital. While calculating this, I filtered out the score data which was non-numeric ( e.g. Low, High etc) as they were all older data from 2013 as compared to the numeric data.There are some numeric scores from 2013 as well but they are all very low in value and hence do not affect the outcome of this query.
+I also filtered out any rows from the original effective_care csv file which had NULL or insufficient values ( this was done by using non-NULL footnote column value)
+
+I use a join between the effective_care and hospitals table to display hospital name instead of the id alongside the average score .
